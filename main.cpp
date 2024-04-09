@@ -2,6 +2,8 @@
 
 #include <thread>
 
+#include "thread_joinablity.h"
+
 void test()
 {
     std::cout<<"hello from test\n";
@@ -28,6 +30,9 @@ int main()
 
     std::cout<<"hello from main\n";
     threadB.join();
+
+    //discuss about joinablity of a thread
+    threadJoinablity();
     
     
 
