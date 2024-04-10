@@ -3,6 +3,7 @@
 #include <thread>
 
 #include "thread_joinablity.h"
+#include "joinAndDetachofThread.h"
 
 void test()
 {
@@ -23,16 +24,19 @@ void funcB()
 
 int main()
 {
-    std::thread threadA(funcA);
+    joinAndDetach();
 
-    std::thread threadB(funcB);
-    threadA.join();
+    
+    // std::thread threadA(funcA);
 
-    std::cout<<"hello from main\n";
-    threadB.join();
+    // std::thread threadB(funcB);
+    // threadA.join();
 
-    //discuss about joinablity of a thread
-    threadJoinablity();
+    // std::cout<<"hello from main\n";
+    // threadB.join();
+
+    // //discuss about joinablity of a thread
+    // threadJoinablity();
     
     
 
